@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度前端学院lesson_2</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        #box{
+            margin: 20px auto;
+            width: 70%;
+            background-color: aquamarine;
+            border-radius: 20px;
+            border: #693b44 solid 5px;
+            padding: 20px;
+        }
+        .box-1{
+            border: dimgrey 3px dotted;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .box-2{
+            font-size: 20px;
+            color: #b812ff;
+        }
+        h1{
+            text-align: center;
+            color: coral;
+            font-weight: bold;
+            font-size: 40px;
+            text-decoration: underline;
+        }
+        .company{
+            font-weight: bold;
+            color: indianred;
+            font-size: 20px;
+            text-shadow: 10px 5px 20px red;
+        }
+        #name strong{
+            color: #8c8c89;
+            font-size: 20px;
+            text-indent: 1em;
+            text-decoration: underline;
+        }
+        #email{
+            line-height: 1;
+        }
+        #text{
+            letter-spacing: 5px;
+        }
+        em{
+            text-transform: uppercase;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>简 历</h1>
+        <div>
+            <div class="box-1">
+                <p class="box-2"><i class="fa fa-id-card" aria-hidden="true"></i>个人简介</p>
+                <img src="http://ife.baidu.com/2018/asset/common/img/logo_a3b4064.png" alt="">
+                <ul id="name">
+                    <li>姓名：<strong>黄晓明</strong></li>
+                    <li>性别：<strong>男</strong></li>
+                    <li>联系方式：<strong id="email">151xxxx7777</strong></li>
+                    <li>邮箱：<strong>xxxxxx@qq.com</strong></li>
+                    <li>毕业院校：<strong>北极大学</strong></li>
+                    <li>详细地址：<strong>西藏喜马拉雅山脉脚下</strong></li>
+                    <li>基本技能：<strong>精通<em>python|javascript|css|html|mysql</em>等单词的拼写</strong></li>
+                </ul>
+            </div>
+            <div class="box-1">
+                <p class="box-2"><i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</p>
+                <ul>
+                    <li>
+                        <p><span>学校：<strong>南极大学</strong></span></p>
+                        <p><span>专业：<strong>企鹅养殖</strong></span></p>
+                        <p><span>学位：<strong>硕士</strong></span></p>
+                        <p><span>时间：<strong>2014.9-2017.6</strong></span></p>
+                    </li>
+                    <li>
+                        <p><span>学校：<strong>北极大学</strong></span></p>
+                        <p><span>专业：<strong>北极熊饲养</strong></span></p>
+                        <p><span>学位：<strong>学士</strong></span></p>
+                        <p><span>时间：<strong>2010.9-2014.6</strong></span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-1">
+                <p class="box-2"><i class="fa fa-list" aria-hidden="true"></i> 项目经验</p>
+                <ul>
+                    <li>
+                        <p class="company">南极企鹅养殖高科技培训公司</p>
+                        <p>担任职务：<strong>企鹅的产后护理</strong></p>
+                        <p><span>项目时间：<strong>2010.9-2014.6</strong></span></p>
+                        <p>项目介绍：
+                            <span id="text">
+                                主要负责企鹅产后护理，及幼儿企鹅的哺乳养育，同时负责公司网站建设与运营<br>
+                                负责企鹅培养过程中数据的采集与分析，以及后续数据的可视化显示，主要采用的工具 <br>
+                                为python后端、vue前端、mysql数据库、linux+nginx+uwsgi部署在阿里云服务器上
+                            </span>
+                        </p>
+                    </li>
+                        <p class="company">北极熊养殖高科技培训公司</p>
+                        <p>担任职务：<strong>高级护理顾问</strong></p>
+                        <p><span>项目时间：<strong>2010.9-2014.6</strong></span></p>
+                        <p>项目介绍：
+                            <span>
+                                主要负责企鹅产后护理，及幼儿企鹅的哺乳养育，同时负责公司网站建设与运营<br>
+                                负责企鹅培养过程中数据的采集与分析，以及后续数据的可视化显示，主要采用的工具 <br>
+                                为python后端、vue前端、mysql数据库、linux+nginx+uwsgi部署在阿里云服务器上
+                            </span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="company">南极天猫国际项目负责人</p>
+                        <p>担任职务：<strong>企鹅高级营销经理</strong></p>
+                        <p><span>项目时间：<strong>2010.9-2014.6</strong></span></p>
+                        <p>项目介绍：
+                            <span>
+                                主要负责企鹅产后护理，及幼儿企鹅的哺乳养育，同时负责公司网站建设与运营<br>
+                                负责企鹅培养过程中数据的采集与分析，以及后续数据的可视化显示，主要采用的工具 <br>
+                                为python后端、vue前端、mysql数据库、linux+nginx+uwsgi部署在阿里云服务器上
+                            </span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
