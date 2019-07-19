@@ -106,5 +106,82 @@ p {
 ![图标](https://img-blog.csdnimg.cn/20190719154839982.PNG) 
 此处提供一个 [Font Awesome](http://www.fontawesome.com.cn/faicons/) ，在设计网页时可以直接引用`<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">`，然后通过css修改其样式。
 
+------------
+### 第四堂课 2019/7/19
+##### 第一部分：CSS背景学习（background）
+ - 背景颜色：**background-color**：
+ 闲杂点：背景颜色:：transparent（透明）
+ - 背景图像：**background-imgae**：
+ 闲杂点：linear-gradient(to bottom, yellow, orange 40%, yellow)表示颜色渐变；
+ 如下图所示：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2019071921470414.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjk2NDYxMA==,size_16,color_FFFFFF,t_70)
+ - 背景重复：**background-repeat**：repeat-x、repeat-y、no-repeat、repeat
+ - 背景定位：**background-position**:
+ **background-position(left，top)**，第一个参数为图片距离左侧内边距的距离，第二个参数为图片距离上侧内边距的距离，其中**参数有三种表示方法**：1、left\right\top\bottom；2、数字px；3、百分数表示法；
+ - 背景图像是否固定或者随着页面的其余部分滚动：**background-attachment** 
+ - 背景尺寸：**background-size: 16px 16px**：
+ 对于每个背景图像，您需要包含两个背景大小值，一个用于水平维度，另一个用于垂直方向：
+ - **background**：在一行中指定以上五个属性的缩写。
+ 
+ ##### 第二部分：CSS边框学习（border）
+ 边框包括三部分：边框样式、边框颜色、边框宽度
+| 边框样式 |  边框颜色|  边框宽度 |
+|--|--|--|
+| border-style |border-color  |  border-width|
+其中：
+ - boder-style属性常用：**solid** 表示实线、**dotted** 表示虚线，其余用的时候查找即可
+ - border-color和border-width正常赋值即可
+ - 通常将三者合起来使用如：**border：black 4px solid;**
+ - 单独某个可使用**border-left-style**，其余参考即可
+ - **border-randius**表示设置边框的*圆角*及*椭圆角*：
+ *border-radius：10px*表示圆角
+ *border-radius：10px/20px*表示椭圆角
+ 
+ ##### 第三部分：CSS列表学习（list）
+ - 列表类型：**list-style-type**： 取值如下：
+disc	默认。标记是实心圆。
+circle	标记是空心圆。
+square	标记是实心方块。
+decimal	标记是数字。
+其余即用即查
+ - 列表项图像：**list-style-image**：url（）
+ - 列表项位置：inside\outside(默认值)
+ - list-style：type、position、image
+ 
+ ##### 第四部分：a链接学习（a标签）
+ - a:link - 普通的、未被访问的链接 
+ - a:visited - 用户已访问的链接 
+ - a:hover - 鼠标指针位于链接的上方
+ - a:active - 链接被点击的时刻
+ - text-decoration：大多数用于去除链接中的下划线
+ - **target**：_balnk，此属性主要用于是否重新在新窗口打开页面
+ 
+  ##### 第五部分：选择器学习
+ - 选择器分组和继承：
+ **分组:** 选择器用逗号分开，被分组的选择器可以分享相同的声明
+  **继承:** 正常情况下，子元素从父元素继承属性但也会出现特殊情况，只能通过组选择器来对待
+ - 派生选择器：
+ 也称为上下文选择器：根据文档的上下文关系来确定某个标签的样式
+ - 伪类选择器
+CSS 伪类用于向某些选择器添加特殊的效果。
+CSS 伪元素用于将特殊的效果添加到某些选择器。
+两者区别在于: 伪类的效果可以通过添加一个实际的类来达到，而伪元素的效果则需要通过添加一个实际的元素才能达到
+ - 组合器：
+ 
+|  名称 | 组合器 | 选择 |
+|--|--|--|
+|选择器组  |A,B  | 匹配满足A（和/或）B的任意元素（参见下方 同一规则集上的多个选择器）. |
+|后代选择器|A B|匹配B元素，满足条件：B是A的后代结点（B是A的子节点，或者A的子节点的子节点）
+|子选择器|A > B|匹配B元素，满足条件：B是A的直接子节点
+|相邻兄弟选择器|A + B|匹配B元素，满足条件：B是A的下一个兄弟节点（AB有相同的父结点，并且B紧跟在A的后面）
+|通用兄弟选择器|A ~ B|匹配B元素，满足条件：B是A之后的任意一个兄弟节点（AB有相同的父节点，B在A之后，但不一定是紧挨着A）     
+ - 选择器的优先级：
+!important 声明的唯一方法是在后面的源码或者是一个拥有更高专用性的源码中包含相同的 !important 特性的声明。
+①找出所有相关的规则，这些规则包含于一个给定元素匹配的选择器
+②对显式权重对所有声明排序。标志!important的规则的权重要高于没有!important标志的规则。创作人员的样式>读者的样式。有!important的读者样式强于其他所有样式（读者的重要声明>创作人员的重要声明>创作人员的普通声明>读者的普通声明>用户代理声明）
+③按特殊性排序，特殊性高的优先
+④按出现顺序排序，越后出现的权重就越大。
+ 
+
 
 
