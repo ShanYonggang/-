@@ -71,6 +71,50 @@ textarea文本域，rows,cols属性值决定大小；
 - **Web语义化是什么，是为了解决什么问题？ **- 
 web语义化是为了让计算机更了解人类，通过新的html标准让计算机更快速的实现网页的解析
 
+------------
+
+### 第三堂课 2019/7/19
+##### 第一部分：css设置字体
+ - 每个人在设计网页时需要确定网页所使用的字体：用**font-family**属性设置，通常我们可用字体栈的形式进行设置，确保字体在相应浏览器中的可用性，具体代码如下：
+```
+p {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+```
+ - 解释下**font-size**中**em**的含义：1em 等于我们设计的当前元素的父元素上设置的字体大小
+ - 四个改变文本样子的属性：
+	 - **font-style**：normal(普通)、italic(斜体)
+	 - **font-weight**：bold、light、lighter、bolder
+	 - **text-decoration**：none、underline、overline
+	 - **text-transform**：none、uppercase、lowercase、capitalize:（其首字母大写）、full-width:（将所有字形转换成固定宽度的正方形）
+##### 第二部分：不常用的css属性
+ - 文本阴影：**text-shadow**
+ - 文本缩进：**text-indent**属性
+ - 字间隔：**word-spacing**属性：改变单词之间的间隔，**letter-spacing**属性：改变字母之间的间距
+ - @-规则(At-rules)在CSS中被用来传递元数据、条件信息或其它描述性信息。它由（@）符号开始，紧跟着一个表明它是哪种规则的描述符
+ - 嵌套语句 是@-规则中的一种，它的语法是 CSS 规则的嵌套块，只有在特定条件匹配时才会应用到文档上。例如 **@media** ：
+```
+@media (min-width: 801px) {
+  body {
+    margin: 0 auto;
+    width: 800px;
+  }
+}
+```
+只有当页面宽度超过801px时候才会应用body属性。
+##### 第三部分：css选择器问题
+ - **选择器作用**：定位网页html元素位置
+ - **简单选择器**：元素选择器、类选择器、ID选择器、通用选择器（*）、
+ - **属性选择器**：[attr]（包含attr属性的）、[attr=value]（attr属性为value）、 [attr~=value] (包含value知)
+ - **伪正则选择器**：[attr|=val] 、[attr^=val]、[attr$=val]、[attr*=val]
+##### 第四部分：补充部分
+ - css工作原理：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190719155837192.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjk2NDYxMA==,size_16,color_FFFFFF,t_70)
+ - 字体图标（类似于下图中的图标显示）：
+![图标](https://img-blog.csdnimg.cn/20190719154839982.PNG) 
+此处提供一个 [Font Awesome](http://www.fontawesome.com.cn/faicons/) ，在设计网页时可以直接引用`<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">`，然后通过css修改其样式。
+
+
 
 
 
